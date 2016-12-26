@@ -4,7 +4,7 @@ const itemUrl="https://world.taobao.com/item/542225473068.htm?fromSite=main&ali_
 const convertedUrl="https://s.click.taobao.com/t?e=m%3D2%26s%3D40wt4W4bUgIcQipKwQzePOeEDrYVVa64Qih%2F7PxfOKS5VBFTL4hn2RjNzjCClKKaHGUKWrwhgPnVTWkqIto4v3oWoz7Mm2I4xgB7KBWgH2FXCw9E8H0f51yL4MavYz5of79lZflCzgRQBTAHr9VzocYMXU3NNCg%2F"
 describe("alimama service", function(){
 	it(`can convert ${itemUrl}`, function(){
-		return convert(itemUrl)
+		return convert(itemUrl,{"推广类型":"网站推广","导购名称":"wechat","推广位名称":"个人推荐"})
 			.then(converted=>{
 				expect(typeof(converted)).toBe("string")
 				expect(converted.substr(-20)).toEqual(convertedUrl.substr(-20))
