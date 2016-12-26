@@ -1,0 +1,29 @@
+{
+  "name": "superdaddy-bot",
+  "description": "Super Daddy bot",
+  "version": "0.1.1",
+  "author": {
+    "name": "Raymond Li",
+    "email": "lalalic@139.com"
+  },
+  "dependencies": {
+    "phantomjs-prebuilt": "^2.1.14",
+    "selenium-webdriver": "^3.0.1",
+    "wechat4u": "^0.6.5"
+  },
+  "devDependencies": {
+    "jest": "^18.0.0"
+  },
+  "scripts": {
+	"test": "jest"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "node": ">= 0.4.4"
+  },
+  "readme": "README.md"
+}
