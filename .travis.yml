@@ -4,6 +4,8 @@ node_js:
 
 install:
  - npm install
+ - mkdir cache
+ - mkdir error
 
 after_script:
  - ls -al cache
