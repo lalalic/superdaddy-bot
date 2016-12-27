@@ -16,8 +16,7 @@
     "request": "^2.79.0"
   },
   "scripts": {
-    "test": "jest",
-	"server": "phantomjs lib/alimama.js"
+    "test": "jest"
   },
   "keywords": [],
   "repository": {
