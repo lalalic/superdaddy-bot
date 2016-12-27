@@ -12,10 +12,12 @@
     "wechat4u": "^0.6.5"
   },
   "devDependencies": {
-    "jest": "^18.0.0"
+    "jest": "^18.0.0",
+    "request": "^2.79.0"
   },
   "scripts": {
-	"test": "jest"
+    "test": "jest",
+	"server": "phantomjs lib/alimama.js"
   },
   "keywords": [],
   "repository": {
