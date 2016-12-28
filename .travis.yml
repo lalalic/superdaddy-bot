@@ -9,3 +9,4 @@ install:
 
 after_script:
  - ls -al cache
+ - ls -al error
