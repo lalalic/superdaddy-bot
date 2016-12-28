@@ -16,7 +16,8 @@
     "request": "^2.79.0"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+	"debug": "node lib/alimama.js"
   },
   "keywords": [],
   "repository": {
