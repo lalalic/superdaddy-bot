@@ -10,3 +10,12 @@ install:
 after_script:
  - ls -al cache
  - ls -al error
+
+deploy:
+ provider: releases
+ user: $user
+ password: $password
+ file: 
+  - "cache/phan.log"
+  - "error/1.jpg"
+ skip_cleanup: true
