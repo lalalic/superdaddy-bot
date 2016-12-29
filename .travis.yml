@@ -2,20 +2,19 @@ language: node_js
 node_js:
  - 6
 
+addons:
+ apt:
+  packages:
+   - sshpass
+
 install:
  - npm install
  - mkdir cache
  - mkdir error
 
-after_script:
+after_failure:
  - ls -al cache
  - ls -al error
-
-deploy:
- provider: releases
- user: $user
- password: $password
- file: 
-  - "cache/phan.log"
-  - "error/1.jpg"
- skip_cleanup: true
+ - travis_wait sshpass -e scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null cache/phan.log "$DEPLOY_USER@$DEPLOY_HOST:/data/log"
+ - travis_wait sshpass -e scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null error/1.html "$DEPLOY_USER@$DEPLOY_HOST:/data/log" 
+ - travis_wait sshpass -e scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null error/1.jpg "$DEPLOY_USER@$DEPLOY_HOST:/data/log"
